@@ -1,0 +1,97 @@
+body {
+	width: 1280px;
+	background-color: #000;
+	color: white;
+}
+
+div {
+	display: inline-block;
+}
+
+.full_empty_row { width : 1212px; }				/* 12 * 101 */
+
+.team_name, .score_section, .timeout_section { width: 444px; } /* 12 x 37 */
+.section, .number_small { width: 60px; }	/* 12 x 5 */
+.number_large {	width: 180px; }				/* 12 x 15 */
+
+.timeouts { width: 60px; }					/* 12 x 5 */
+
+/* Dividers */
+.divider { width: 12px; }					/* 11 + 1  */
+.divider_two { width: 24px; }				/* 12 x 2 */
+.divider_three { width: 36px; }				/* 12 x 3 */
+.divider_four { width: 48px; }				/* 12 x 4 */
+.divider_foul_middle { width: 180px; }		/* 12 x 15 */
+.divider_possession_middle { width: 36px; }	/* 12 x 3 */
+.shotclock_empty { width: 96px; }			/* 12 x 8 */
+
+
+.circle {
+	background-color: #222;
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	margin-top: 1px; 
+	margin-left: 1px; 
+}
+
+/* On colours */
+.on { background-color: white; }
+.shotclock .on { background-color: red; }
+.score .on { background-color: yellow; }
+.possession .on { background-color: orange; }
+.timeouts .on { background-color: orange; }
+
+
+#center { width: 324px; }				/* 12 x 27 */
+.possession { width: 132px; }			/* 12 x 11 */
+.foul_word { width: 60px; }				/* 12 x 5 */
+#controls { margin-top: 10px; }
+
+/* Game controls */
+.game_controls { width: 316px; }		/* 12 x 27 - 8 */
+
+/* Home and Away controls */
+.team_control { width: 436px; }			/* 12 x 37 - 8 */
+
+button {
+	display: inline-block;
+	padding: 4px 10px 4px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333333;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: #fafafa;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-repeat: no-repeat;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	*margin-left: .3em;
+
+	margin-top: 10px;
+}
+
+button.disabled, button[disabled] {
+	cursor: default;
+	background-image: none;
+	background-color: #e6e6e6;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}

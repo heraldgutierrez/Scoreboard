@@ -1,0 +1,137 @@
+html
+	head
+		title Herald Gutierrez - Scoreboard
+		link(rel='stylesheet' type='text/css' href='css/scoreboard.css')
+		script(src='js/jquery-2.0.3.min.js')
+		script(src='js/scoreboard.js')
+
+	body
+		table#scoreboard
+			tbody
+				tr(style='height: 20%;')
+					td
+						center
+							| Home :
+							select#home_team_select
+								option(value='') - Select Team
+								option(value='Black') Black
+								option(value='Blue') Blue
+								option(value='Green') Green
+								option(value='Red') Red
+								option(value='White') White
+								option(value='Yellow') Yellow
+							br
+							label#home_team_label.team_name Home:
+					td
+						center
+							label#shotclock.shotclock 24
+					td
+						center
+							| Away :
+							select#away_team_select
+								option(value='') - Select Team
+								option(value='Black') Black
+								option(value='Blue') Blue
+								option(value='Green') Green
+								option(value='Red') Red
+								option(value='White') White
+								option(value='Yellow') Yellow
+							br
+							label#away_team_label.team_name Visitor: 
+				tr(style='height: 40%;')
+					td#home
+						center
+							label#home_score.score 0
+					td#time
+						center
+							label#timer.timer
+							br
+							table
+								tr
+									td(style='min-width: 80px; max-width: 90px;')
+										center.bonus
+											| Fouls:
+											label#home_foul_count 0
+											label#home_bonus
+												br
+												br
+												| Bonus
+									td(style='min-width: 150px; max-width: 190px;')
+										div#to_container
+											center
+												label#home_timeout.timer_to
+													b &#9664;
+												label#timer_to.timer_to 30
+												label#away_timeout.timer_to
+													b &#9654;
+												br
+												label.timer_to Time Out
+									td(style='min-width: 80px; max-width: 90px;')
+										center.bonus Fouls:
+											label#away_foul_count 0
+											label#away_bonus
+												br
+												br
+												| Bonus
+					td#visit
+						center
+							label#away_score.score 0
+				tr(style='height: 10%;')
+					td
+						table
+							tr
+								td(align='right')
+									button#home_add_point Add 1 Point
+								td
+									button#home_remove_point Remove 1 Point
+							tr
+								td(align='right')
+									label#home_timeout_half_count
+									| &nbsp;&nbsp;
+									button#home_timeout_half 30 Second Timeout
+								td
+									button#home_timeout_full 60 Second Timeout
+									| &nbsp;&nbsp;
+									label#home_timeout_full_count
+							tr
+								td(align='right')
+									button#home_foul Foul
+								td
+									button#home_reset_foul_count Reset Fouls
+					td
+						center
+							button#start_timer Start Clock
+							button#stop_timer Stop Clock
+							br
+							br
+							button#reset_sc Reset ShotClock
+							br
+							br
+							input#mins(type='number' min='0' max='20' placeholder='Mins')
+							input#secs(type='number' min='0' max='60' placeholder='Secs')
+							button#change_time Change Time
+					td
+						table
+							tr
+								td(align='right')
+									button#away_add_point Add 1 Point
+								td
+									button#away_remove_point Remove 1 Point
+							tr
+								td(align='right')
+									label#away_timeout_half_count
+									| &nbsp;&nbsp;
+									button#away_timeout_half 30 Second Timeout
+								td
+									button#away_timeout_full 60 Second Timeout
+									| &nbsp;&nbsp;
+									label#away_timeout_full_count
+							tr
+								td(align='right')
+									button#away_foul Foul
+								td
+									button#away_reset_foul_count Reset Fouls
+		br
+		a#changeSkin(href='#') Change skin
+
+		

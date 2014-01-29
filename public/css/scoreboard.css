@@ -1,0 +1,106 @@
+#scoreboard, #scoreboard > tbody > tr > td {
+	border: 2px solid black;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+}
+
+#visit, #home {
+	width: 35%;
+}
+
+#home_team_select {
+	z-index: 999;
+}
+
+.team_name {
+	font-size: 53pt;
+}
+
+#home_score {
+	/*z-index: -100;*/
+	/*height: 200pt;*/
+}
+
+.score {
+	display: inline-block;
+	/*background-color: red;*/
+	font-size: 350pt;	
+	/*font-size: 300px;
+	font-size: 10vw;*/
+	line-height: 200pt;
+}
+
+.timer {
+	font-size: 150pt;
+}
+
+.timer_to {
+	font-size: 40pt;	
+}
+
+.shotclock {
+	font-size: 150pt;
+	line-height: 100pt;
+	color: red;
+}
+
+.bonus {
+	font-size: 20pt;
+	line-height: 10pt;
+}
+
+#home_bonus, #away_bonus {
+	color: red;
+}
+
+button {
+	display: inline-block;
+	padding: 4px 10px 4px;
+	font-size: 13px;
+	line-height: 18px;
+	color: #333333;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: #fafafa;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-repeat: no-repeat;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	*margin-left: .3em;
+}
+
+button.disabled, button[disabled] {
+	cursor: default;
+	background-image: none;
+	background-color: #e6e6e6;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.dark {
+	color: white;
+	background-color: black;
+}
+
+#scoreboard.darkTable, #scoreboard.darkTable > tbody > tr > td {
+	border: 2px solid white;
+}

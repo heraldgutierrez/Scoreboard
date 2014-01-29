@@ -1,0 +1,574 @@
+html
+	head
+		title Herald Gutierrez - LED Scoreboard
+		link(rel='stylesheet' type='text/css' href='css/scoreboard-led.css')
+		script(src='js/jquery-2.0.3.min.js')
+		script(src='js/scoreboard-led.js')
+
+	body
+		- var small_height = 7;
+		- var small_width = 5;
+		- var number_small = small_width * small_height;
+
+		- var large_width = 15;
+		- var large_height = 24;
+		- var number_large = large_width * large_height;
+
+		- var divider_small = small_height;
+		- var shotclock_empty = 8 * small_height;
+
+		- var possession_width = 11;
+		- var possession_height = 3;
+		- var possession_size = possession_height * possession_width;
+
+		- var smaller_height = 7;
+		- var foul_word = small_width * smaller_height;
+		- var foul_edge = 4 * small_height;
+		- var foul_middle = 15 * small_height;
+
+		- var full_width = 101;
+		- var timeout_height = 2;
+		- var timeout_width = 5;
+		- var timeout_section = timeout_height * timeout_width;
+
+		- var middle_width = 27;
+
+		- var divider_two = 2;
+		- var divider_three = 3;
+		- var divider_four = 4;
+
+		- var score_empty_row = (large_width * 2) + (divider_two * 2) + divider_three;
+
+		center
+			div
+				div#top
+					div.full_empty_row
+						- for(var i = 0; i < (full_width * 2); i++) {
+							div.circle
+						- }
+
+					div#home_team_name.team_name
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#home_letter_0.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#home_letter_1.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#home_letter_2.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#home_letter_3.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#home_letter_4.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#home_letter_5.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+
+					div.shotclock
+						div.shotclock_empty
+							- for(var i = 0; i < shotclock_empty; i++) {
+								div.circle
+							- }
+
+						div#shotclock_tens.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+
+						div#shotclock_ones.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+
+						div.shotclock_empty
+							- for(var i = 0; i < shotclock_empty; i++) {
+								div.circle
+							- }
+
+					div#away_team_name.team_name
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#away_letter_0.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#away_letter_1.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#away_letter_2.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#away_letter_3.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#away_letter_4.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#away_letter_5.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+
+				br
+				div#middle
+					div#home_score.score
+						div.score_section
+							div.score_empty_row
+								- for(var i = 0; i < (score_empty_row * 2); i++) {
+									div.circle
+								- }
+							div.divider_two
+								- for(var i = 0; i < (large_height * divider_two); i++) {
+									div.circle
+								- }
+							div.tens.number_large
+								- for(var i = 0; i < number_large; i++) {
+									div.circle
+								- }
+							div.divider_three
+								- for(var i = 0; i < (large_height * divider_three); i++) {
+									div.circle
+								- }
+							div.ones.number_large
+								- for(var i = 0; i < number_large; i++) {
+									div.circle
+								- }
+							div.divider_two
+								- for(var i = 0; i < (large_height * divider_two); i++) {
+									div.circle
+								- }
+						
+						br
+						div.timeout_section
+							div.score_empty_row
+								- for(var i = 0; i < score_empty_row; i++) {
+									div.circle
+								- }
+							div.divider
+								- for(var i = 0; i < timeout_height; i++) {
+									div.circle
+								- }
+
+							- for(var j = 0; j < 6; j++) {
+								div.timeouts
+									- for(var i = 0; i < timeout_section; i++) {
+										div.circle
+									- }
+
+								div.divider
+									- for(var i = 0; i < timeout_height; i++) {
+										div.circle
+									- }
+							- }
+							
+							div.score_empty_row
+								- for(var i = 0; i < score_empty_row; i++) {
+									div.circle
+								- }
+
+					div#center
+						div#timer
+							div.empty_row
+								- for(var i = 0; i < (middle_width * 2); i++) {
+									div.circle
+								- }
+
+							div.divider
+								- for(var i = 0; i < divider_small; i++) {
+									div.circle
+								- }
+
+							div#minute_ten.number_small
+								- for(var i = 0; i < number_small; i++) {
+									div.circle
+								- }
+
+							div.divider
+								- for(var j = 0; j < divider_small; j++) {
+									div.circle
+								- }
+
+							div#minute_one.number_small
+								- for(var j = 0; j < number_small; j++) {
+									div.circle
+								- }
+
+							div.divider
+								- for(var j = 0; j < divider_small; j++) {
+									div.circle
+								- }
+
+							div.divider.colon
+								- for(var j = 0; j < divider_small; j++) {
+									div.circle
+								- }
+
+							div.divider
+								- for(var i = 0; i < divider_small; i++) {
+									div.circle
+								- }
+
+							div#second_ten.number_small
+								- for(var i = 0; i < number_small; i++) {
+									div.circle
+								- }
+
+							div.divider
+								- for(var j = 0; j < divider_small; j++) {
+									div.circle
+								- }
+
+							div#second_one.number_small
+								- for(var j = 0; j < number_small; j++) {
+									div.circle
+								- }
+
+							div.divider
+								- for(var i = 0; i < divider_small; i++) {
+									div.circle
+								- }
+							
+						
+						div#possessions
+							div.empty_row
+								- for(var i = 0; i < middle_width; i++) {
+									div.circle
+								- }
+							div.divider
+								- for(var i = 0; i < possession_height; i++) {
+									div.circle
+								- }
+							div#home_possession_arrow.possession
+								- for(var i = 0; i < possession_size; i++) {
+									div.circle
+								- }
+							div.divider_possession_middle
+								- for(var i = 0; i < (possession_height * 3); i++) {
+									div.circle
+								- }
+							div#away_possession_arrow.possession
+								- for(var i = 0; i < possession_size; i++) {
+									div.circle
+								- }
+							div.divider
+								- for(var i = 0; i < possession_height; i++) {
+									div.circle
+								- }
+
+
+						div#fouls
+							div.empty_row
+								- for(var i = 0; i < middle_width; i++) {
+									div.circle
+								- }
+							
+							div#foul_words
+								div.divider
+									- for(var i = 0; i < smaller_height; i++) {
+										div.circle
+									- }
+
+								div.number_small.foul_word
+									- for(var i = 0; i < foul_word; i++) {
+										div.circle
+									- }
+
+								div.divider_foul_middle
+									- for(var i = 0; i < (smaller_height * 15); i++) {
+										div.circle
+									- }
+
+								div.number_small.foul_word
+									- for(var i = 0; i < foul_word; i++) {
+										div.circle
+									- }
+
+								div.divider
+									- for(var i = 0; i < smaller_height; i++) {
+										div.circle
+									- }
+
+							div.empty_row
+								- for(var i = 0; i < middle_width; i++) {
+									div.circle
+								- }
+							
+							div#foul_counts
+								div.divider
+									- for(var i = 0; i < small_height; i++) {
+										div.circle
+									- }
+
+								div#home_foul_count.number_small
+									- for(var i = 0; i < number_small; i++) {
+										div.circle
+									- }
+
+								div.divider_two
+									- for(var i = 0; i < (small_height * divider_two); i++) {
+										div.circle
+									- }
+
+								div#timeout_tens.number_small
+									- for(var i = 0; i < number_small; i++) {
+										div.circle
+									- }
+
+								div.divider
+									- for(var i = 0; i < small_height; i++) {
+										div.circle
+									- }
+
+								div#timeout_ones.number_small
+									- for(var i = 0; i < number_small; i++) {
+										div.circle
+									- }
+
+								div.divider_two
+									- for(var i = 0; i < (small_height * divider_two); i++) {
+										div.circle
+									- }
+
+								div#away_foul_count.number_small
+									- for(var i = 0; i < number_small; i++) {
+										div.circle
+									- }
+
+								div.divider
+									- for(var i = 0; i < small_height; i++) {
+										div.circle
+									- }
+		
+							div.empty_row
+								- for(var i = 0; i < middle_width; i++) {
+									div.circle
+								- }
+
+					div#away_score.score
+						div.score_section
+							div.score_empty_row
+								- for(var i = 0; i < (score_empty_row * 2); i++) {
+									div.circle
+								- }
+							div.divider_two
+								- for(var i = 0; i < (large_height * divider_two); i++) {
+									div.circle
+								- }
+							div.tens.number_large
+								- for(var i = 0; i < number_large; i++) {
+									div.circle
+								- }
+							div.divider_three
+								- for(var i = 0; i < (large_height * divider_three); i++) {
+									div.circle
+								- }
+							div.ones.number_large
+								- for(var i = 0; i < number_large; i++) {
+									div.circle
+								- }
+							div.divider_two
+								- for(var i = 0; i < (large_height * divider_two); i++) {
+									div.circle
+								- }
+
+						br
+						div.timeout_section
+							div.score_empty_row
+								- for(var i = 0; i < score_empty_row; i++) {
+									div.circle
+								- }
+							div.divider
+								- for(var i = 0; i < timeout_height; i++) {
+									div.circle
+								- }
+							- for(var j = 0; j < 6; j++) {
+								div.timeouts
+									- for(var i = 0; i < timeout_section; i++) {
+										div.circle
+									- }
+
+								div.divider
+									- for(var i = 0; i < timeout_height; i++) {
+										div.circle
+									- }
+							- }
+							div.score_empty_row
+								- for(var i = 0; i < score_empty_row; i++) {
+									div.circle
+								- }
+
+				br
+				div#bottom.full_empty_row
+					- for(var i = 0; i < (full_width * 2); i++) {
+						div.circle
+					- }
+				
+				br
+				div#controls
+					table
+						tr
+							td
+								div#home_controls.team_control
+									center
+										div
+											| Home :
+											select#home_team_select
+												option(value='HOME' selected='selected') - Home -
+												option(value='BLACK') Black
+												option(value='BLUE') Blue
+												option(value='GREEN') Green
+												option(value='RED') Red
+												option(value='WHITE') White
+												option(value='YELLOW') Yellow
+
+										br
+										table
+											tr
+												td
+													button#home_remove_point Remove 1 Point
+												td
+													button#home_add_point_1 Add 1 Point
+												td
+													button#home_add_point_2 Add 2 Points
+												td
+													button#home_add_point_3 Add 3 Points
+											tr
+												td
+													button#home_foul_reset Reset Fouls
+												td
+													button#home_foul_add Add Foul
+												td
+												td
+													button#home_timeout 30 Sec Timeout
+
+							td
+								div#main_controls.game_controls
+									center
+										table
+											tr
+												td
+													button#start_timer Start Clock
+													button#stop_timer Stop Clock
+												td
+													&nbsp;
+												td
+													button#reset_shotclock Reset ShotClock
+											tr
+												td
+													button#home_possession Home Possession
+												td
+													&nbsp;
+												td
+													button#away_possession Away Possession
+											tr
+												td(colspan='3')
+													center
+														input#mins(type='number' min='0' max='30' placeholder='Mins') &nbsp;
+														input#secs(type='number' min='0' max='60' placeholder='Secs')
+														button#change_time Change Time
+
+							td
+								div#away_controls.team_control
+									center
+										div
+											| Away :
+											select#away_team_select
+												option(value='AWAY' selected='selected') - Away -
+												option(value='BLACK') Black
+												option(value='BLUE') Blue
+												option(value='GREEN') Green
+												option(value='RED') Red
+												option(value='WHITE') White
+												option(value='YELLOW') Yellow
+
+										br
+										table
+											tr
+												td
+													button#away_remove_point Remove 1 Point
+												td
+													button#away_add_point_1 Add 1 Point
+												td
+													button#away_add_point_2 Add 2 Points
+												td
+													button#away_add_point_3 Add 3 Points
+											tr
+												td
+													button#away_foul_reset Reset Fouls
+												td
+													button#away_foul_add Add Foul
+												td
+												td
+													button#away_timeout 30 Sec Timeout
