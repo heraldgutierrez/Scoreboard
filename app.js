@@ -34,6 +34,15 @@ app.configure('development', function() {
 	app.use(express.errorHandler());
 });
 
+// configure socket.io
+io.configure(function () { 
+	io.set('log level', 1); 				// reduce logging
+
+	// web sockets for heroku
+	io.set("transports", ["xhr-polling"]); 
+	io.set("polling duration", 10); 
+});
+
 
 /*********************************************************
 **********************************************************
