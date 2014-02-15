@@ -163,6 +163,8 @@ button.disabled, button[disabled] {
 	.divider_possession_middle { width: 42px; }	/* 14 x 3 */
 	.shotclock_empty { width: 112px; }			/* 14 x 8 */
 
+	.shotclock { width : 378px; }
+
 	.team_name, .score_section, .timeout_section { width: 518px; } /* 14 x 37 */
 	.section, .number_small { width: 70px; }	/* 14 x 5 */
 	.number_large {	width: 210px; }				/* 14 x 15 */

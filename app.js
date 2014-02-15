@@ -12,6 +12,7 @@ var io = require('socket.io').listen(server);
 
 // routes
 var routes = require('./routes');
+var ledSimple = require('./routes/led_simple')(io);
 
 // all environments
 app.configure(function() {
@@ -53,9 +54,10 @@ io.configure(function () {
 *********************************************************/
 
 app.get('/', routes.index);
-app.get('/Scoreboard', routes.scoreboard);
-app.get('/LED_Scoreboard', routes.ledscoreboard);
-app.get('/LED_Scoreboard_v2', routes.ledscoreboard2);
+app.get('/Simple', routes.scoreboard);
+app.get('/LED', routes.ledscoreboard);
+app.get('/LEDSimple', ledSimple.ledSimpleScoreboard);
+app.get('/LEDSimpleControl', ledSimple.ledSimpleScoreboardControls);
 
 server.listen(app.get('port'), function() {
 // http.createServer(app).listen(app.get('port'), function(){
