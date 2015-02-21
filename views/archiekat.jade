@@ -1,0 +1,430 @@
+html(ng-app='MinuteScoreboard')
+	head
+		meta(name='author' content='Herald Gutierrez')
+		meta(name='description' content='LED basketball scoreboard')
+		meta(name='keywords' content='HTML, CSS, JavaScript, jQuery, NodeJS, Jade, ExpressJS')
+
+		title Herald Gutierrez - LED Scoreboard
+		
+		link(rel='stylesheet' type='text/css' href='css/archiekat.css')
+		script(src='js/angular.min.js')
+		script(src='js/jquery-2.0.3.min.js')
+		script(src='js/app.js')
+		script(src='js/archiekat.js')
+		//-script(src='js/scoreboard-led-big.js')
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-47823472-1', 'heraldgutierrez.com');
+			ga('send', 'pageview');
+
+	body(ng-controller='MainController')
+		- var small_height = 7;
+		- var small_width = 5;
+		- var number_small = small_width * small_height;
+
+		- var large_width = 15;
+		- var large_height = 24;
+		- var number_large = large_width * large_height;
+
+		- var divider_small = small_height;
+		- var shotclock_empty = 8 * small_height;
+
+		- var possession_width = 11;
+		- var possession_height = 3;
+		- var possession_size = possession_height * possession_width;
+
+		- var smaller_height = 7;
+		- var foul_word = small_width * smaller_height;
+		- var foul_edge = 4 * small_height;
+		- var foul_middle = 15 * small_height;
+
+		- var full_width = 101;
+		- var timeout_height = 2;
+		- var timeout_width = 5;
+		- var timeout_section = timeout_height * timeout_width;
+
+		- var middle_width = 27;
+
+		- var divider_two = 2;
+		- var divider_three = 3;
+		- var divider_four = 4;
+
+		- var score_empty_row = (large_width * 2) + (divider_two * 2) + divider_three;
+
+		center
+			div#ScoreboardContainer
+				div
+					div.full_empty_row
+						- for(var i = 0; i < (full_width * 3); i++) {
+							div.circle
+						- }
+					div#banner
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_0.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_1.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_2.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_3.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_4.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_5.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_6.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_7.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_8.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_9.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_10.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_11.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_12.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_13.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_14.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_15.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div.divider_four
+							- for(var i = 0; i < (divider_small * divider_four); i++) {
+								div.circle
+							- }
+					div.full_empty_row
+						- for(var i = 0; i < (full_width * 3); i++) {
+							div.circle
+						- }
+
+				div#top
+					div.full_empty_row
+						- for(var i = 0; i < full_width; i++) {
+							div.circle
+						- }
+					div#player_name
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_0.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_1.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_2.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_3.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_4.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_5.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_6.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_7.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_8.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_9.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_10.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_11.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_12.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_13.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_14.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div#letter_15.number_small
+							- for(var i = 0; i < number_small; i++) {
+								div.circle
+							- }
+						div.divider
+							- for(var i = 0; i < divider_small; i++) {
+								div.circle
+							- }
+						div.divider_four
+							- for(var i = 0; i < (divider_small * divider_four); i++) {
+								div.circle
+							- }
+					div.full_empty_row
+						- for(var i = 0; i < (full_width * 2); i++) {
+							div.circle
+						- }
+				br
+				div#middle
+					div#high_score.score
+						div.score_section
+							div.divider_two
+								- for(var i = 0; i < (large_height * divider_two); i++) {
+									div.circle
+								- }
+							div.tens.number_large
+								- for(var i = 0; i < number_large; i++) {
+									div.circle
+								- }
+							div.divider_three
+								- for(var i = 0; i < (large_height * divider_three); i++) {
+									div.circle
+								- }
+							div.ones.number_large
+								- for(var i = 0; i < number_large; i++) {
+									div.circle
+								- }
+							div.divider_two
+								- for(var i = 0; i < (large_height * divider_two); i++) {
+									div.circle
+								- }
+							
+					div#center
+						div
+							div.middle_blank
+								- for(var i = 0; i < (middle_width * 24); i++) {
+									div.circle
+								- }
+
+					div#timer.score.blink
+						div.score_section
+							div.divider_two
+								- for(var i = 0; i < (large_height * divider_two); i++) {
+									div.circle
+								- }
+							div.tens.number_large
+								- for(var i = 0; i < number_large; i++) {
+									div.circle
+								- }
+							div.divider_three
+								- for(var i = 0; i < (large_height * divider_three); i++) {
+									div.circle
+								- }
+							div.ones.number_large
+								- for(var i = 0; i < number_large; i++) {
+									div.circle
+								- }
+							div.divider_two
+								- for(var i = 0; i < (large_height * divider_two); i++) {
+									div.circle
+								- }
+
+				br
+				div.full_empty_row
+					- for(var i = 0; i < (full_width * 4); i++) {
+						div.circle
+					- }
+				
+				br
+				div#controls
+					table
+						tr
+							td
+								input(ng-model='CurrentName') 
+								button(ng-click='UpdateName()') Update Name 
+								br
+								input(ng-model='CurrentHighScore')
+								button(ng-click='UpdateHighScore()') Update High Score
+							td
+								center
+									button.big(ng-click='TimerPaused = false', ng-show='TimerPaused && !ShowReset') Start Clock
+									button.big(ng-click='TimerPaused = true', ng-show='!TimerPaused')  Stop Clock
+									button.big(ng-click='ResetTime()', ng-show='ShowReset')  Reset Clock
+
+

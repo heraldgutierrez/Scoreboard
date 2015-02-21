@@ -58,6 +58,7 @@ app.get('/Simple', routes.scoreboard);
 app.get('/LED', routes.ledscoreboard);
 app.get('/LEDSimple', ledSimple.ledSimpleScoreboard);
 app.get('/LEDSimpleControl', ledSimple.ledSimpleScoreboardControls);
+app.get('/ArchieKat', routes.archiekat);
 
 server.listen(app.get('port'), function() {
 // http.createServer(app).listen(app.get('port'), function(){

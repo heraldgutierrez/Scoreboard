@@ -15,3 +15,7 @@ exports.scoreboard = function(req, res) {
 exports.ledscoreboard = function(req, res) {
 	res.render('scoreboard_led');
 };
+
+exports.archiekat = function(req, res) {
+	res.render('archiekat');
+};
