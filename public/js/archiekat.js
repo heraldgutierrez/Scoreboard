@@ -89,7 +89,7 @@ app.controller('MainController', ['$scope', function($scope) {
 		UpdateScore();
 		ResetTime();
 
-		timerCounter = setInterval(StartTime, 1000);
+		timerCounter = setInterval(StartTime, 978);
 	}
 
 	function StartTime() {
