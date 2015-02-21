@@ -84,7 +84,7 @@ app.controller('MainController', ['$scope', function($scope) {
 	init()
 
 	function init() {
-		SetName('#banner', ' Archie and Mary');
+		SetName('#banner', ' Mary and Archie');
 		UpdateHighScore();
 		UpdateScore();
 		ResetTime();
